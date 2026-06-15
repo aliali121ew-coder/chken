@@ -6,7 +6,9 @@
       "Bash(git --version)",
       "Bash(gh --version)",
       "Bash(gh auth *)",
-      "Bash(grep -rnEli \"eyJ[A-Za-z0-9_-]{20,}|sk_live|sk_test|AIza[0-9A-Za-z_-]{20,}|service_role|supabase\\\\.co\" lib/ android/)"
+      "Bash(grep -rnEli \"eyJ[A-Za-z0-9_-]{20,}|sk_live|sk_test|AIza[0-9A-Za-z_-]{20,}|service_role|supabase\\\\.co\" lib/ android/)",
+      "Bash(psql --version)",
+      "Bash(git check-ignore *)"
     ]
   }
 }

@@ -53,7 +53,7 @@ import 'app_routes.dart';
 /// screen, so the app's content (home, categories, cart, profile…) can be
 /// browsed without a working Supabase backend. Data-driven screens will still
 /// show empty/error states because there is no real server to fetch from.
-const bool kDevBypassAuth = true;
+const bool kDevBypassAuth = false;
 
 /// Maps a user's role to the home route of their dedicated shell.
 String _homeRouteForRole(UserRole role) {

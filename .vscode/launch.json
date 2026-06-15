@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MarketX (dev · Supabase)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "--dart-define=SUPABASE_URL=https://wvbixvfscnfepcnmxxxf.supabase.co",
+        "--dart-define=SUPABASE_ANON_KEY=sb_publishable_mdCfVzIl5IkIlfB2PLLt9A_mQCZ0u9o"
+      ]
+    },
+    {
+      "name": "MarketX (dev · Chrome)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "deviceId": "chrome",
+      "args": [
+        "--dart-define=SUPABASE_URL=https://wvbixvfscnfepcnmxxxf.supabase.co",
+        "--dart-define=SUPABASE_ANON_KEY=sb_publishable_mdCfVzIl5IkIlfB2PLLt9A_mQCZ0u9o"
+      ]
+    }
+  ]
+}
