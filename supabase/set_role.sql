@@ -19,3 +19,13 @@ WHERE id = (SELECT id FROM auth.users WHERE email = 'see313see@gmail.com');
 -- → CUSTOMER: back to the normal storefront
 -- UPDATE profiles SET role = 'customer'
 -- WHERE id = (SELECT id FROM auth.users WHERE email = 'see313see@gmail.com');
+
+-- NOTE for VENDOR: the vendor shell shows the store you OWN. Claim the demo
+-- Tech Store so its products/orders/settings appear (run with role = 'vendor'):
+-- UPDATE stores SET owner_id = (SELECT id FROM auth.users WHERE email = 'see313see@gmail.com')
+-- WHERE id = '33333333-3333-3333-3333-333333333301';
+
+-- Verify current role:
+SELECT u.email, p.role
+FROM profiles p JOIN auth.users u ON u.id = p.id
+WHERE u.email = 'see313see@gmail.com';

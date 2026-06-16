@@ -7,14 +7,18 @@
 ///              --dart-define=FLAVOR=dev
 /// ```
 abstract final class Env {
+  // Defaults point at the dev Supabase project. The anon/publishable key is
+  // designed to be safe in client code (RLS enforces access), so shipping it
+  // as a default lets any launch method (IDE Run button, `flutter run`) work
+  // without manual --dart-define. Override per-build via --dart-define.
   static const String supabaseUrl = String.fromEnvironment(
     'SUPABASE_URL',
-    defaultValue: '',
+    defaultValue: 'https://wvbixvfscnfepcnmxxxf.supabase.co',
   );
 
   static const String supabaseAnonKey = String.fromEnvironment(
     'SUPABASE_ANON_KEY',
-    defaultValue: '',
+    defaultValue: 'sb_publishable_mdCfVzIl5IkIlfB2PLLt9A_mQCZ0u9o',
   );
 
   static const String stripePublishableKey = String.fromEnvironment(
